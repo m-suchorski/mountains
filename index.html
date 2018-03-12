@@ -296,8 +296,35 @@
 
         </footer>
 
+        <div class="se-pre-con">
+
+
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+        
+        
+        </div>   
+
     </body>
 
-    <script src="./scripts/core.js"></script>
 
+
+    <script src="./scripts/core.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $( window ).on('load', function(){
+            $("body").css("overflow", 'visible');
+            $(".se-pre-con").fadeOut("slow");
+        });
+    </script>
 </html>

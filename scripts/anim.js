@@ -35,8 +35,6 @@ $(document).ready(function()
 
     $MenuBtn.on("click", function(ev){
 
-
-        console.log("clicked");
         $Menu.css("display", "block");
 
         setTimeout(function(){

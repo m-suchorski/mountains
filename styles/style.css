@@ -770,6 +770,7 @@
         transform:translateX(300px);
         transition:all 0.5s ease-in-out;
         overflow:hidden;
+        display:none;
     }
 
     .top-bar__list--visible

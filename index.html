@@ -6,6 +6,8 @@
 
         <meta charset="utf-8"/>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     </head>
     <body>
@@ -15,12 +17,22 @@
 
             <div class="top-bar">
 
-                <div class="top-bar__logo"> <h1 class="top-bar__logoText">MOUN<span class="top-bar__logoText--blue">T</span>AIN.</h1></div>
-            
+                <div class="top-bar__logoWrapper">
+                    <div class="top-bar__logo"> <h1 class="top-bar__logoText">MOUN<span class="top-bar__logoText--blue">T</span>AIN.</h1></div>
+                    
+
+                </div>
+
+                    
+
+                <div class="top-bar__menuToggle"></div>
+
+                
+
                 <nav>
                     <ul class="top-bar__list">
 
-                        <li class="top-bar__item"><a href="#">HOME</a></li>
+                        <li class="top-bar__item top-bar__item--first"><a href="#">HOME</a></li>
                         <li class="top-bar__item"><a href="#">ABOUT</a></li>
                         <li class="top-bar__item"><a href="#">PAGES</a></li>
                         <li class="top-bar__item"><a href="#">GALLERY</a></li>
@@ -66,14 +78,18 @@
 
         <div class="mid-section">
 
-            <h2 class="mid-section__mainText">WELCOME</h2>
-            <h3 class="mid-section__smallText">WHO ARE WE ?</h3>
+            <div class="mid-section__textWrapper">
 
-            <div class="mid-section__dotsWrapper">
+                <h2 class="mid-section__mainText">WELCOME</h2>
+                <h3 class="mid-section__smallText">WHO ARE WE ?</h3>
 
-                <div class="mid-section__dot--noMargin"></div>
-                <div class="mid-section__dot"></div>
-                <div class="mid-section__dot"></div>
+                <div class="mid-section__dotsWrapper">
+
+                    <div class="mid-section__dot--noMargin"></div>
+                    <div class="mid-section__dot"></div>
+                    <div class="mid-section__dot"></div>
+
+                </div>
 
             </div>
 
@@ -167,8 +183,13 @@
 
         <div class="feat-section">
 
-            <h5 class="feat-section__mainText">FEATURES</h5>
-            <div class="feat-section__spacing"></div>
+
+            <div class="feat-section__textWrapper">
+            
+                <h5 class="feat-section__mainText">FEATURES</h5>
+                <div class="feat-section__spacing"></div>
+
+            </div>
 
             <p class="feat-section__paragraph--gray">
 
@@ -241,9 +262,12 @@
 
         <div class="booking-section">
 
-            <h6 class="booking-section__mainText">BOOKING</h6>
-            <div class="booking-section__spacing"></div>
+            <div class="booking-section__textWrapper">
 
+                <h6 class="booking-section__mainText">BOOKING</h6>
+                <div class="booking-section__spacing"></div>
+
+            </div>
             <p class="booking-section__paragraph--gray">
 
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -266,8 +290,13 @@
 
         <div class="find-section">
 
-            <p class="find-section__mainText">FIND US</p>
-            <div class="find-section__spacing"></div>
+            <div class="find-section__textWrapper">
+
+                    <p class="find-section__mainText">FIND US</p>
+                    <div class="find-section__spacing"></div>
+
+            </div>
+
 
             <p class="find-section__paragraph--gray">
 
@@ -280,7 +309,7 @@
 
             <p class="find-section__address">
 
-                9529 Fairway St. <br><br><br>
+                9529 Fairway St. <br><br>
                 Roanoke Rapids, NC 27870
 
             </p>
@@ -318,9 +347,9 @@
 
 
 
-    <script src="./scripts/core.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script src="./scripts/anim.js"></script>
     <script>
         $( window ).on('load', function(){
             $("body").css("overflow", 'visible');

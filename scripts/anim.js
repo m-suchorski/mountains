@@ -13,11 +13,17 @@ $(document).ready(function()
 
         if(isMenuVisible)
         {
+
             $Menu.removeClass("top-bar__list--visible");
             $MenuBtn.removeClass("top-bar__menuToggle--toggled");
-        }
 
-        return false;
+            setTimeout(function() {
+                $Menu.css("display", "none");
+            }, 500)
+
+            isMenuVisible = false;
+
+        }
 
     });
 
@@ -29,10 +35,20 @@ $(document).ready(function()
 
     $MenuBtn.on("click", function(ev){
 
+
+        console.log("clicked");
+        $Menu.css("display", "block");
+
+        setTimeout(function(){
+            ev.stopPropagation();
+            $Menu.addClass("top-bar__list--visible");
+            $MenuBtn.addClass("top-bar__menuToggle--toggled");
+            isMenuVisible = true;
+            
+        }, 100);
+
         ev.stopPropagation();
-        $Menu.addClass("top-bar__list--visible");
-        $MenuBtn.addClass("top-bar__menuToggle--toggled");
-        isMenuVisible = true;
+
 
     });
     

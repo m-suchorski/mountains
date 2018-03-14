@@ -16,13 +16,13 @@ $(document).ready(function()
 
             $Menu.removeClass("top-bar__list--visible");
             $MenuBtn.removeClass("top-bar__menuToggle--toggled");
-
+        
             setTimeout(function() {
                 $Menu.css("display", "none");
             }, 500)
 
-            isMenuVisible = false;
 
+            isMenuVisible = false;
         }
 
     });
@@ -35,17 +35,30 @@ $(document).ready(function()
 
     $MenuBtn.on("click", function(ev){
 
-        $Menu.css("display", "block");
+        if(!isMenuVisible)
+        {
+            $Menu.css("display", "block");
 
-        setTimeout(function(){
+            setTimeout(function(){
+                ev.stopPropagation();
+                $Menu.addClass("top-bar__list--visible");
+                $MenuBtn.addClass("top-bar__menuToggle--toggled");
+                isMenuVisible = true;
+                
+            }, 100);
+    
             ev.stopPropagation();
-            $Menu.addClass("top-bar__list--visible");
-            $MenuBtn.addClass("top-bar__menuToggle--toggled");
-            isMenuVisible = true;
-            
-        }, 100);
+        } else {
+            $Menu.removeClass("top-bar__list--visible");
+            $MenuBtn.removeClass("top-bar__menuToggle--toggled");
+        
+            setTimeout(function() {
+                $Menu.css("display", "none");
+            }, 500)
 
-        ev.stopPropagation();
+            isSMenuVisible = false;
+        }
+
 
 
     });
